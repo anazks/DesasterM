@@ -1,0 +1,38 @@
+<style>
+    .fa {
+  font-size: 90px;
+  cursor: pointer;
+  user-select: none;
+}
+.container2{
+  width: 50%;
+  margin: auto;
+  background-color: black;
+}
+</style>
+<div class="container2">
+
+    <div class="card mb-3" style="max-width: 1000px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+          {{#each blog}}
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="/images/blogs/{{this.img}}" class="img-fluid rounded-start" alt="...">
+                </div>
+                    <br>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <p class="card-text">{{this.discription}}</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago </small></p>
+                      <div class="btn btn-outline-info"> 
+                         <a href="/seller/like/{{this.id}}"><i style="font-size: 22px;" class="fa fa-thumbs-up"></i></a> &nbsp; <span class="badge rounded-pill bg-danger">{{this.likes}}</span>
+                      </div>
+
+                  </div>
+                </div>
+              </div>
+                <br>
+  {{/each}}
+
+</div>
+
+</div>

@@ -1,0 +1,75 @@
+<style>
+  .rows{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .card{  
+    height: 300px;
+    width: 250px;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .card :hover{
+
+    color: white;
+    background-color: black;
+
+  }
+</style>
+<div style="height:70px;width:100%;background-color:black;">
+  <h1 style="color:white;text-align:center">Healp needed</h1>
+</div>
+<div style="height:70px;width:100%;background-color:antiquewhite;">
+  <h1 style="color:black;text-align:center">VOLUNTEER SERVICE</h1>
+</div>
+
+
+<div class="rows">
+        {{#each result}}
+        <div class="card">
+                <div class="card">
+                  <img style="height:360px;" src="/images/product/{{this.photo}}"  alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;"><b><i>{{this.name}}</i></b></h5>
+                        <p class="card-text"><b>{{this.time}}</b></p>
+                        <a href="https://anazks123.github.io/dis/live_maps.html" class="btn btn-outline-info" target="_blank" style="width: 100%;">View map</a>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                       Add
+                  </button>
+                </div>
+            </div>
+        {{/each}}
+   
+</div>
+
+<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Add Blog</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <form action="/seller/addblog" method="post" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Discription</label>
+            <input type="text" name="discription" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Add image</label>
+            <input type="file" name="image" class="form-control" id="exampleInputPassword1">
+          </div>
+         <input type="submit" value="add">
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a href="/seller/blogView" class="btn btn-success">Stories</a>
+      </div>
+    </div>
+  </div>
+</div>

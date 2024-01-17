@@ -1,0 +1,44 @@
+
+</div>
+<div class="container">
+    <div class="card mb-3" style="max-width:50%;">
+  <div class="row g-0  ">
+      {{#each result}}
+    <div class="col-md-4 cart"  style="margin-top: 10px;">
+      <img src="https://static.wixstatic.com/media/35359a_13bd028132814c6f9cdffeaa07e9c134~mv2.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8 cart"  style="margin-top: 10px;">
+      <div class="card-body">
+        <h5 class="card-title">Booked For {{this.name}}</h5>
+           <p class="card-text">{{this.userMail}}</p>
+         <p class="card-text">Name: <b>{{this.userName}}</b> </p>
+          <p class="card-text">Booking Date: <b>{{this.BookingDate}}</b> </p>
+            <p class="card-text">Booked Date: <b>{{this.status}}</b> </p>
+        {{!-- <h6 class="card-title">Quantity:{{this.qnty}}</h6> --}}
+        <form action="/seller/issueDate" method="post">
+        <input type="date" name="status">
+        <input type="hidden" name="id" value="{{this.id}}">
+        <input type="submit" value="issue Date" class="btn btn-outline-warning">
+         {{!-- <a href="/users/bookNow/{{this.name}}/{{this.clinicID}}" class="btn btn-outline-warning">Book Now</a> --}}
+
+        </form>
+       
+     
+{{!--         
+        <a class="btn btn-primary" href="/users/qnty_decrement/{{this.Id}}" role="button">-</a>
+        <a class="btn btn-primary" href="/users/qnty_increment/{{this.Id}}" role="button">+</a>
+        <a class="btn btn-warning" href="/users/buynow/{{this.id}}/{{this.Price}}/{{this.qnty}}" role="button">Buy Now</a>
+        <a class="btn btn-danger" href="/users/remove/{{this.Id}}" role="button">Remove</a> --}}
+
+      </div>
+    </div>
+   
+    {{/each}}
+  </div>
+</div>
+</div>
+
+
+
+
+

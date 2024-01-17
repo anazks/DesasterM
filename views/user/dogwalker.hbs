@@ -1,0 +1,23 @@
+{{> userHeader}}
+<div class="container">
+    <div class="card mb-3" style="max-width:50%;border:none">
+  <div class="row g-0">
+      {{#each result}}
+    <div class="col-md-4 cart"  style="margin-top: 10px;">
+      <img src="https://cdn.dribbble.com/users/6832303/screenshots/17496302/media/c7a55a0cfd5487d1326a5de47c2d56c8.png?compress=1&resize=400x300" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8 cart"  style="margin-top: 10px;">
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <p class="card-text">{{this.time}}</p>
+        <h6>Price:{{this.Price}}</h6>
+        <h6 class="card-title">Place:{{this.place}}</h6>
+                <h6 class="card-title">Number:{{this.number}}</h6>
+       
+
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+</div>

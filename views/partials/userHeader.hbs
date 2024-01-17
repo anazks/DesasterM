@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    {{!-- <a class="navbar-brand" href="/users/" style="color: white;"  style="margin-left: 180px;" ><b>PetShop</b> <sub style="color: gold;">ExplorePlus</sub> </a> --}}
+  
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+      <div  class="row g-3 align-items-center">
+  <div class="col-auto">
+     </div>
+
+
+     <div class="col-auto" style="display: flex;" >
+       <form action="/users/search" method="post">
+    {{!-- <input  type="text" name="item" style="width: 450px;" id="inputPassword6" placeholder="Search for pets or foods"  class="form-control" aria-describedby="passwordHelpInline">    
+      <input style="background-color: black;color:white;" type="submit" value="Search">
+    </form> --}}
+    </div>
+  
+  <div class="col-auto">
+    <span id="passwordHelpInline" class="form-text">
+     
+    </span>
+   
+      {{!-- <div class="btn-group"></div>
+    <button   style="margin-left: 30px;" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      {{user.user_name}}
+        </button>  --}}
+      
+    <div class="dropdown">
+      {{#if user}}
+  <button class="dropbtn">{{user.Product_name}}</button>
+  <div class="dropdown-content">
+  <a href="/users/update/{{user.email}}">Account settings</a>
+  <a href="/users/logout">Logout</a>
+
+    {{else}}
+        <button   style="margin-left: 30px;" type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          more
+        </button>
+            <a href="/users/userLogin" style="width: 150px;" class="btn btn-dark" >Login</a>
+  {{/if}}
+        
+  </div>
+  </div>
+</div>
+    
+    </div>
+    <div style="margin-left: 20px;">
+       {{#if user}}
+    
+          {{!-- <a class="nav-link" href="#" style="color: white;">Cart<i class="fa fa-shopping-cart" style="font-size:30px;color:rgb(255, 254, 254)"></i></a> --}}
+          {{!-- <button type="button" class="btn btn-dark position-relative"> --}}
+            {{!-- <a class="nav-link" href="/users/cart/{{user.email}}" style="color: white;">WishList<i class="fa fa-shopping-cart" style="font-size:30px;color:rgb(255, 254, 254)"></i></a> --}}
+            {{!-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"> --}}
+              {{CartTotal}}
+              </span>
+              </span>
+              </button>
+              {{!-- <a href="/users/myorders" class="btn btn-dark" style="color: aliceblue;">My Orders</a> --}}
+              {{!-- <a href="/users/jobs" style="text-decoration: none;" class="btn btn-dark"  >Jobs</a> --}}
+             {{!-- <a href="/users/offers" class="btn btn-dark">Updates</a>
+                 <a href="/users/doctor" class="btn btn-dark">Clinics</a>
+                     <a href="/users/dogW" class="btn btn-dark">Dog Walkers</a> --}}
+                       <a href="/users/doctor" class="btn btn-dark">Volunteers</a>
+                       <a href="http://localhost:7000" class="btn btn-dark">Chat</a>
+
+        {{/if}}
+    </div>
+  </div>
+  
+
+</nav>

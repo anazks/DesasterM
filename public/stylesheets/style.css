@@ -1,0 +1,111 @@
+
+
+
+body {
+  padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.section{
+  margin-top: 20px;
+  margin-left: 0;
+}
+
+
+.cards{
+  height: 150px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.dropbtn {
+  background-color:  #000000;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(222, 9, 9, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #eae5e5}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #040404;
+}
+.bottom{
+  background-color: white;
+  height: 50px;
+  width: 100%;
+}
+.cart{
+  
+  background-color:#FFFFFF;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  background: linear-gradient(to right,#f857a6,#ff5858);
+}
+.container3{
+  text-align: center;
+  top:80px;
+  margin-left:900px;
+  position:fixed;
+  width: 400px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.sdiv{
+  height: 90px;
+  width: 100%;
+  background-color: #00B7FF;
+}
+.select{
+  
+}
+.bodyUser{
+/* background-image: url(https://images.pexels.com/photos/1038711/pexels-photo-1038711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+ background-size: 100vw 100vh;
+ background-repeat: no-repeat;
+ 
+}
+.foods{
+  height: 20px;
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+  color: #000000;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.bookings{
+height: auto;
+  width: 400px;
+
+  margin-left: 950px;
+  top: 0;
+  position: fixed;
+  margin-top: 90px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}

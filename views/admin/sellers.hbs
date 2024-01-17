@@ -1,0 +1,117 @@
+
+  <style>
+    .viewTable{
+      width: 70%;
+      margin: auto;
+      margin-top: 50px;
+     
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+  </style>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="color: white;"><b><i>Welcome Admin</i></b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/home" style="color: white;"><b><i>Home</i></b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/addProduct" style="color: white;"><b><i>District Admins</i></b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sellers" style="color: white;"><b><i>View Admins</i></b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Blocke_sellers" style="color: white;"><b><i>Blocked users</i></b></a>
+        </li>
+                <li class="nav-item">
+          <a class="nav-link" href="/userlist" style="color: white;"><b><i>users</i></b></a>
+        </li>
+        </li>
+                <li class="nav-item">
+          <a class="nav-link" href="/" style="color: white;"><b><i>Logout</i></b></a>
+        </li>
+ 
+          
+        
+        <li class="nav-item dropdown">
+          {{!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a> --}}
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/Blocke_sellers">Blocked Seller</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+{{!-- <nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Admin</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sellers">users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Blocke_sellers">Blocked user</a>
+        </li>
+        <li class="nav-item dropdown">
+          
+        </li>
+        
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav> --}}
+
+<div class="container viewTable">
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Seller ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">District</th>
+      <th scope="col">Registred As</th>
+        <th scope="col">action</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each seller}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.userName}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.place}}</td>
+      <td>{{this.type}}</td>
+       <td> <a href="/block/{{this.id}}" class="btn btn-outline-danger">Block</a></td>
+         {{!-- <td> <a href="/approve/{{this.id}}" class="btn btn-outline-info">Approve</a></td> --}}
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
+</div>
